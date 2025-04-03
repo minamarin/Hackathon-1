@@ -1,0 +1,17 @@
+{
+  "name": "Dark Mode Every Where",
+  "description": "Makes every website dark with white text.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["main.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Activate Dark Mode"
+  }
+}

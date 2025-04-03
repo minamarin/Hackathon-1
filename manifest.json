@@ -3,15 +3,10 @@
   "description": "Makes every website dark with white text.",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting"],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": ["style.css"],
-      "js": ["main.js"]
-    }
-  ],
+  "permissions": ["scripting", "tabs", "activeTab"],
   "action": {
-    "default_title": "Activate Dark Mode"
-  }
+    "default_title": "Activate Dark Mode",
+    "default_popup" : "popup.html"
+  },
+  "host_permissions": ["<all_urls>"]
 }
